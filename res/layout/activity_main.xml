@@ -24,10 +24,12 @@
         android:id="@+id/serialReveicedText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText2"
-        android:layout_below="@+id/editText2"
         android:ems="10"
-        android:inputType="textMultiLine" >
+        android:inputType="textMultiLine"
+        android:layout_toRightOf="@+id/textView1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/buttonScan">
 
         <requestFocus />
     </EditText>
@@ -36,33 +38,8 @@
         android:id="@+id/buttonSerialSend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/serialSendText"
-        android:layout_alignRight="@+id/serialSendText"
-        android:text="Send Data" />
-
-    <EditText
-        android:id="@+id/serialSendText"
-        android:layout_width="310dp"
-        android:layout_height="40dp"
-        android:layout_alignLeft="@+id/buttonScan"
-        android:layout_below="@+id/buttonScan"
-        android:layout_marginTop="17dp"
-        android:background="#555555"
-        android:bufferType="editable"
-        android:ems="10"
-        android:inputType="text"
-        android:text="testing"
-        android:textColor="#999999"
-        android:textSize="20dip" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/serialSendText"
-        android:layout_below="@+id/serialSendText"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:text="Received Data" />
+        android:text="@string/commandbutton"
+        android:layout_above="@+id/serialReveicedText"
+        android:layout_alignEnd="@+id/serialReveicedText" />
 
 </RelativeLayout>

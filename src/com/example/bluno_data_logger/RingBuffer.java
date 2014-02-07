@@ -1,4 +1,5 @@
 package com.example.bluno_data_logger;
+import android.util.Log;
 
 @SuppressWarnings("unchecked")
 public class RingBuffer<T> {
@@ -31,7 +32,7 @@ public class RingBuffer<T> {
     
     public void push(T item) {
         if (count == buffer.length) {
-        	System.out.println("Ring buffer overflow");
+        	Log.d("BLUNO","Ring buffer overflow");
 //            throw new RuntimeException("Ring buffer overflow");
         }
         buffer[indexIn] = item;
@@ -44,7 +45,7 @@ public class RingBuffer<T> {
 
     public T pop() {
         if (isEmpty()) {
-        	System.out.println("Ring buffer pop underflow");
+        	Log.d("BLUNO","Ring buffer pop underflow");
 
 //            throw new RuntimeException("Ring buffer underflow");
         }
@@ -60,7 +61,7 @@ public class RingBuffer<T> {
     
     public T next() {
         if (isEmpty()) {
-        	System.out.println("Ring buffer next underflow");
+        	Log.d("BLUNO","Ring buffer next underflow");
 //            throw new RuntimeException("Ring buffer underflow");
         }
         return buffer[indexOut];
