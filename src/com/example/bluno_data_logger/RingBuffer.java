@@ -31,6 +31,8 @@ public class RingBuffer<T> {
     }
     
     public void push(T item) {
+        Log.d("BLUNO","push");
+
         if (count == buffer.length) {
         	Log.d("BLUNO","Ring buffer overflow");
 //            throw new RuntimeException("Ring buffer overflow");
@@ -44,6 +46,8 @@ public class RingBuffer<T> {
     }
 
     public T pop() {
+        Log.d("BLUNO","pop");
+
         if (isEmpty()) {
         	Log.d("BLUNO","Ring buffer pop underflow");
 
